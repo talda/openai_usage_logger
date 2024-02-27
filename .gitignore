@@ -6,3 +6,5 @@ openai_costs_logger.egg-info
 openaiCostsLogger.egg-info
 openai_costs_logger/.DS_Store
 .DS_Store
+*.pyc
+openai_usage_logger.egg-info

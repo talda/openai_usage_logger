@@ -2,7 +2,7 @@ import json
 import logging
 from collections import defaultdict
 
-class costsLogger:
+class usageLogger:
     _instance = None
     _is_initialized = False
 

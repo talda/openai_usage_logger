@@ -1,4 +1,4 @@
-# openai-costs-logger
+# openai_usage_logger
 
 This library provides a simple way to log OpenAI API usage and costs. It maintains a record of the number of prompt and completion tokens used for different OpenAI models, as well as the associated costs.
 
@@ -16,7 +16,7 @@ Use the library to log responses from OpenAI's completion API, including the mod
 
 ```python
 import openai
-from openai_costs_logger import costsLogger
+from openai_usage_logger import usageLogger
 
 # Example OpenAI completion API call
 response = openai.ChatCompletion.create(
@@ -26,14 +26,14 @@ response = openai.ChatCompletion.create(
 ```
 # Logging the response with a usage tag
 ```python
-costsLogger().log(response, tag='usage_tag')
+usageLogger().log(response, tag='usage_tag')
 ```
 # Advanced Usage with Custom Logger
 You can also pass a custom logger to the log method if you want to use a specific logging configuration.
 
 ```python
 import logging
-from openai_costs_logger import costsLogger
+from openai_usage_logger import usageLogger
 ```
 # Set up your custom logger
 ```python
@@ -42,7 +42,7 @@ logging.basicConfig(level=logging.INFO)
 ```
 # Using the custom logger
 ```python
-costsLogger().log(response, tag='usage_tag', logger=custom_logger)
+usageLogger().log(response, tag='usage_tag', logger=custom_logger)
 ```
 Model Costs
 The package currently supports cost calculation for the following models:
