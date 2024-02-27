@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "openai_usage_logger"
-version = "0.1.1"
+version = "0.1.2"
 description = "A utility for logging OpenAI API usage and costs."
-readme = { file = "README.md" }
+readme = "README.md"
 authors = [
     { name = "Tal Darom", email = "tal.darom@gmail.com" }
 ]
@@ -20,5 +20,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Bug Tracker" = "https://github.com/talda/openai-costs-logger/issues"
+"Bug Tracker" = "https://github.com/talda/openai-usage-logger/issues"
 
