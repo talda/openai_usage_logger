@@ -2,6 +2,9 @@
 
 This library provides a simple way to log OpenAI API usage and costs. It maintains a record of the number of prompt and completion tokens used for different OpenAI models, as well as the associated costs.
 
+## Install
+pip install openai-usage-logger
+
 ## Features
 
 - Tracks usage and costs for different tags and models.
