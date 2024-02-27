@@ -90,3 +90,5 @@ class usageLogger:
         }
         
         logger.info(json.dumps(log_entry, indent=4))
+        
+        return log_entry
