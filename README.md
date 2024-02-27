@@ -26,6 +26,7 @@ response = openai.ChatCompletion.create(
     model='gpt-3.5-turbo-0125',
     messages=messages,
 )
+usageLogger().log(response)
 ```
 # Logging the response with a usage tag
 ```python
