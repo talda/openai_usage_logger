@@ -20,5 +20,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Bug Tracker" = "https://github.com/talda/openaiCostsLogger/issues"
+"Bug Tracker" = "https://github.com/talda/openai-costs-logger/issues"
 
