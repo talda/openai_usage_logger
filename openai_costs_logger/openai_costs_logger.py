@@ -2,7 +2,7 @@ import json
 import logging
 from collections import defaultdict
 
-class openaiCostsLogger:
+class costsLogger:
     _instance = None
     _is_initialized = False
 
@@ -45,12 +45,14 @@ class openaiCostsLogger:
 
             
             # Set up logging
-            self.logger = logging.getLogger(__name__)
+            self.default_logger = logging.getLogger(__name__)
             logging.basicConfig(level=logging.INFO)
 
             self.__class__._is_initialized = True
 
-    def log(self, response, tag=''):
+    def log(self, response, tag='', logger=None):
+        
+        logger = logger if logger else self.default_logger
         model = response.model
         prompt_tokens_added = response.usage.prompt_tokens
         completion_tokens_added = response.usage.completion_tokens
@@ -87,4 +89,4 @@ class openaiCostsLogger:
             'Total Cost Across All Tags': total_cost_across_all_tags
         }
         
-        self.logger.info(json.dumps(log_entry, indent=4))
+        logger.info(json.dumps(log_entry, indent=4))

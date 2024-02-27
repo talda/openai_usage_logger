@@ -1,0 +1,8 @@
+token
+dist/
+build/
+openai_costs_logger/__pycache__
+openai_costs_logger.egg-info
+openaiCostsLogger.egg-info
+openai_costs_logger/.DS_Store
+.DS_Store
