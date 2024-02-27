@@ -23,27 +23,27 @@ response = openai.ChatCompletion.create(
     model='gpt-3.5-turbo-0125',
     messages=messages,
 )
-
+```
 # Logging the response with a usage tag
+```python
 costsLogger().log(response, tag='usage_tag')
-Advanced Usage with Custom Logger
+```
+# Advanced Usage with Custom Logger
 You can also pass a custom logger to the log method if you want to use a specific logging configuration.
 
-python
-Copy code
+```python
 import logging
 from openai_costs_logger import costsLogger
-
+```
 # Set up your custom logger
+```python
 custom_logger = logging.getLogger('my_custom_logger')
 logging.basicConfig(level=logging.INFO)
-
+```
 # Using the custom logger
+```python
 costsLogger().log(response, tag='usage_tag', logger=custom_logger)
-How It Works
-The costsLogger class uses a singleton pattern to ensure a single instance.
-It stores token usage and cost information for different models and tags.
-The log method updates the token counts and calculates costs, allowing for detailed logging of API usage.
+```
 Model Costs
 The package currently supports cost calculation for the following models:
 
