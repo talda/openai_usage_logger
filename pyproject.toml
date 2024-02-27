@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "openai_usage_logger"
 version = "0.1.1"
 description = "A utility for logging OpenAI API usage and costs."
-readme = "README.md"
+readme = { file = "README.md" }
 authors = [
     { name = "Tal Darom", email = "tal.darom@gmail.com" }
 ]
